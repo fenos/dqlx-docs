@@ -2,8 +2,8 @@
 module.exports = {
   title: 'dqlx',
   tagline: 'A query builder for DGraph',
-  url: 'https://fenos.github.io/dqlx',
-  baseUrl: '/',
+  url: 'https://fenos.github.io',
+  baseUrl: '/dqlx/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
