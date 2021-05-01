@@ -174,19 +174,19 @@ func main() {
 
 	var animals []map[string]interface{}
 
-        _, err = db.Query(dqlx.HasFn("species")).
-            Filter(
-                dqlx.Eq{"species": "Cat"},
-                dqlx.Lt{"age": 5},
-            ).
-            Fields(`
-                uid
-                name
-                species
-                age
-            `).
-            UnmarshalInto(&animals).
-            Execute(ctx)
+    _, err = db.Query(dqlx.HasFn("species")).
+        Filter(
+            dqlx.Eq{"species": "Cat"},
+            dqlx.Lt{"age": 5},
+        ).
+        Fields(`
+            uid
+            name
+            species
+            age
+        `).
+        UnmarshalInto(&animals).
+        Execute(ctx)
 
 	if err != nil { panic(err) }
 
