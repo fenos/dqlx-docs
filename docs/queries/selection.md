@@ -6,7 +6,7 @@ sidebar_position: 1
 
 In this section we'll learn how to select nodes and edges for our queries.
 
-### Node / Fields
+### Fields
 
 We use the `Fields` function to select the nodes we are interested in:
 
@@ -89,3 +89,14 @@ If you prefer using a slice syntax over the conventional string (using the symbo
 you can instead use `EdgePath([]string{"favorite_food", ...})` or `Edge(dqlx.EdgePath([]string{"favorite_food", ...}))`
 
 :::
+
+### Aliases
+
+In Order to alias a field you'll just use the expression `alias:field`
+
+```go
+db.QueryType("Animal").Fields(`
+    uid
+    alias:name
+`)
+```

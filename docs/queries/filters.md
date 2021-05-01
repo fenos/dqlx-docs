@@ -132,7 +132,7 @@ dqlx.BetweenFn("age", 1, 30) // as Function
 dqlx.Between("age", 1, 30)   // as Function (alias)
 ```
 
-### UID
+### UIDIn
 
 UID function: `UIDFn(predicate)` <br />
 [Dgraph Doc](https://dgraph.io/docs/query-language/functions/#type)
@@ -142,9 +142,9 @@ dqlx.UIDIn{"name": []string{"Ollie", "Leo"}} // as Map
 dqlx.UIDInFn("name", []string{"Ollie", "Leo"}) // as Function
 ```
 
-### UIDIn
+### UID
 
-UIDIn function: `UIDInFn(predicate, vlaues)` <br />
+UID function: `UID(predicate, vlaues)` <br />
 [Dgraph Doc](https://dgraph.io/docs/query-language/functions/#type)
 
 ```go
@@ -290,5 +290,17 @@ Fulltext function: `Fulltext(predicate, value)` <br />
 ```go
 dqlx.Fulltext{ "name": "value" } // as Map
 dqlx.FulltextFn("name", "value") // as Function
+```
+
+### Expr
+
+Expr function: `Expr(predicate)` <br />
+
+The `Expr` allows you to write Raw statement as the value, the variable will not be escape.
+
+```go
+dqlx.Eq{ 
+	"name": dqlx.Expr("count(animals)"),
+}
 ```
 

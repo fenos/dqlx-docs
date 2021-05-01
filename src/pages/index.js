@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="A Query builder for Dgraph"
+      description="A Query Builder for Dgraph"
     >
       <HomepageHeader />
     </Layout>

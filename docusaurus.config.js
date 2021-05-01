@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'dqlx',
-  tagline: 'A query builder for DGraph',
+  tagline: 'A Query Builder for Dgraph',
   url: 'https://fenos.github.io',
   baseUrl: '/dqlx/',
   onBrokenLinks: 'throw',

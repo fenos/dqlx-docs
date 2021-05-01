@@ -145,19 +145,19 @@ func main() {
 		{
 			"uid": "_:leo",
 			"name": "Leo",
-			"animal": "Cat",
+			"species": "Cat",
 			"age": 6,
 		},
 		{
 			"uid": "_:ollie",
 			"name": "Ollie",
-			"animal": "Cat",
+			"species": "Cat",
 			"age": 2,
 		},
 		{
 			"uid": "_:charlie",
 			"name": "Charlie",
-			"animal": "Dog",
+			"species": "Dog",
 			"age": 3,
 		},
 	}
@@ -174,23 +174,23 @@ func main() {
 
 	var animals []map[string]interface{}
 
-	_, err = db.Query(dqlx.HasFn("animal")).
-		Filter(
-			dqlx.Eq{"animal": "Cat"},
-			dqlx.Lt{"age": 5},
-		).
-	 	Fields(`
-			uid
-			name
-			animal
-			age
-		`).
-		UnmarshalInto(&animals).
-	 	Execute(ctx)
+        _, err = db.Query(dqlx.HasFn("species")).
+            Filter(
+                dqlx.Eq{"species": "Cat"},
+                dqlx.Lt{"age": 5},
+            ).
+            Fields(`
+                uid
+                name
+                species
+                age
+            `).
+            UnmarshalInto(&animals).
+            Execute(ctx)
 
 	if err != nil { panic(err) }
 
-	println(fmt.Sprintf("The amilas are: %v", animals))
+	println(fmt.Sprintf("The animals are: %v", animals))
 }
 ```
 
