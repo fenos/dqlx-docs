@@ -13,7 +13,7 @@ to easily develop and maintain your Dgraph schema.
 ## Installation
 
 ```bash
-go get github.com/fenos/dqlx
+go get -u github.com/fenos/dqlx
 ```
 
 ## Connecting 
