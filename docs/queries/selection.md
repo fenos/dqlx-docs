@@ -21,8 +21,8 @@ db.QueryType("Animal").Fields(`
 produces:
 
 ```graphql
-query RootQuery($0: string) {
-    rootQuery(func: type($0)) {
+query RootQuery {
+    rootQuery(func: type(Animal)) {
         uid
         name
         animal
@@ -59,8 +59,8 @@ db.QueryType("Animal").
 produces
 
 ```graphql
-query RootQuery($0: string) {
-    rootQuery(func: type($0)) {
+query RootQuery {
+    rootQuery(func: type(Animal)) {
         uid
         name
         animal
