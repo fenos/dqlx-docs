@@ -10,7 +10,7 @@ Operations that mutate the storage are called `Mutations` we are going to use a 
 to store and update data.
 
 If we provide a valid `uid` within the node we are trying to operate on, the operation becomes an `Update`.
-If the `uid` we provided doesn't exist it will insert it. 
+If the `uid` we provided doesn't exist it will try to insert it. 
 
 The set operation works like an `Upsert` operation over the `uid`
 
@@ -42,7 +42,7 @@ data := []map[string]interface{}{
 response, err := db.Mutation().Set(data).Execute(ctx)
 ```
 
-You can access the newrly generated `uids` of the above records form the `response` object
+You can access the newly generated `uids` of the above records form the `response` object
 
 ```go
 response.Raw.Uids // map[string]string
@@ -108,7 +108,7 @@ resp, err := db.Mutation().Set(data).Execute(ctx)
 
 ### Logical Upsert
 
-If we want to make upsert on other fields other than the `uid` we use a combination of a `Query` and `Mutation`
+If we want to upsert on other fields other than the `uid` we use a combination of a `Query` and `Mutation`
 
 let’s say we want to create a new user with `email` and `name` information.
 We also want to make sure that one `email` has exactly one corresponding `user` in the database. 

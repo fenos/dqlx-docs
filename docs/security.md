@@ -13,7 +13,7 @@ If you come from a SQL world you might be familiar with the term `SQL Injection`
 
 DQL Injection is the same beast. Every time a query is dynamically generated (**with dqlx or not**) strings gets concatenated together to create the final query.
 
-The problem arise when your queries are generated based on `User Inputs`. If you are exposing inputs that gets **directly mapped** into a query,
+The problem arise when your queries are generated based on `User Inputs`. If you are accepting user inputs that gets **directly mapped** into a query,
 the "Exploiter" might figure out a way to send an input which might alter the original query that you originally meant to run. 
 
 This mean that the "Exploiter" might be able to request more data than he supposed to, or even worst it could delete or alter important information.
@@ -144,7 +144,7 @@ print(query)
 
 3. **SECURITY CHECKLIST**
 
-This checklist that helps to make sure to be on right track on security, if all your answers are **YES**, your probability of being safe are extraordinary high.
+This checklist helps to make sure to be on the right track on security, if all your answers are **YES**, your probability of being safe are extraordinary high.
 
 - I'm not trusting the user
 - I run validation on the user input
@@ -154,7 +154,7 @@ This checklist that helps to make sure to be on right track on security, if all 
 
 #### Extremely safe scenarios
 
-- I'm hard coding parameters
+- I'm hard coding parameters / predicates
 - I'm conditionally building a query
 - Parameters are only coming from the program internal data structures (no external data involved)
 
