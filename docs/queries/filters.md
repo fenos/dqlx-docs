@@ -39,7 +39,7 @@ db.Query(dqlx.HasFn("name")).
 ```
 
 You can either add filters within a single `Filter()` call, or chain multiple `Filter` calls, the result is the same.
-All the above filters will be concatenated together with a `AND` condition
+All the above filters will be concatenated together with an `AND` condition
 
 
 #### Sugars on Filters
@@ -296,7 +296,7 @@ dqlx.FulltextFn("name", "value") // as Function
 
 Expr function: `Expr(predicate)` <br />
 
-The `Expr` allows you to write Raw statement as the value, the variable will not be escape.
+The `Expr` allows you to write Raw statement as the value, the variable will not be escaped.
 
 ```go
 dqlx.Eq{ 

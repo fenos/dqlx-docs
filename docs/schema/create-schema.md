@@ -129,7 +129,7 @@ schema := db.Schema()
 
 // ...
 
-err := schame.Alter(ctx, dqlx.WithDropAll(false))
+err := schame.Alter(ctx, dqlx.WithDropAll(true))
 ```
 
 By default, indexing is set to run **In the background** if you prefer it on the main process you can disable it
