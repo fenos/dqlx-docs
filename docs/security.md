@@ -13,11 +13,12 @@ If you come from a SQL world you might be familiar with the term `SQL Injection`
 
 DQL Injection is the same beast. Every time a query is dynamically generated (**with dqlx or not**) strings gets concatenated together to create the final query.
 
+At this time of writing I'm not aware of any escaping mechanism given by the DQL language, things might change.
+
 The problem arise when your queries are generated based on `User Inputs`. If you are accepting user inputs that gets **directly mapped** into a query,
 the "Exploiter" might figure out a way to send an input which might alter the original query that you originally meant to run. 
 
 This mean that the "Exploiter" might be able to request more data than he supposed to, or even worst it could delete or alter important information.
-
 
 ### dqlx at rescue
 
