@@ -1,7 +1,6 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
-import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
@@ -9,10 +8,19 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
 
-
   return (
     <div className={clsx('hero', styles.heroBanner)}>
-      <div className="container">
+
+      <img src={"/static/img/graph-icon-1.svg"} className={clsx(styles.graph, styles.graph1)} />
+      <img src={"/static/img/graph-icon-2.svg"} className={clsx(styles.graph, styles.graph2)} />
+      <img src={"/static/img/graph-icon-3.svg"} className={clsx(styles.graph, styles.graph3)} />
+      <img src={"/static/img/graph-icon-4.svg"} className={clsx(styles.graph, styles.graph4)} />
+      <img src={"/static/img/graph-icon-5.svg"} className={clsx(styles.graph, styles.graph5)} />
+      <img src={"/static/img/graph-icon-6.svg"} className={clsx(styles.graph, styles.graph6)} />
+
+
+      <div className={clsx("container", styles.content)}>
+
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
@@ -21,6 +29,14 @@ function HomepageHeader() {
             to="/docs/getting-started/intro">
             Get Started
           </Link>
+        </div>
+        <div className={styles.githubLogo}>
+          <a href={"https://github.com/fenos/dqlx"}>
+            <img src={"/static/img/github-icon.png"} />
+          </a>
+          {/*<iframe src="https://ghbtns.com/github-btn.html?user=fenos&repo=dqlx&type=star&count=true&size=large"*/}
+          {/*        frameBorder="0" scrolling="0" width="170" height="30" title="GitHub">*/}
+          {/*</iframe>*/}
         </div>
       </div>
     </div>

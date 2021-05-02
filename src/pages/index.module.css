@@ -5,6 +5,10 @@
  * and scoped locally.
  */
 
+.content {
+  z-index: 100;
+}
+
 .heroBanner {
   height: calc(100vh - 60px);
   text-align: center;
@@ -35,13 +39,186 @@
   border-color: transparent;
 }
 
-.spark {
-  background-color: #DE4A00;
-  font-family: 'Helvetica', sans-serif;
-  visibility: hidden;
+.githubLogo {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.githubLogo img {
+  width: 95px;
+}
+
+[data-theme="dark"] .githubLogo img {
+  filter: brightness(0.2) invert(1);
+}
+
+/* graphs graphics */
+
+.graph {
   position: absolute;
-  width: 4px;
-  height: 4px;
-  border-radius: 30%;
-  box-shadow: 0 0 5px #AB000B;
+  width: 150px;
+  opacity: 0.4;
+}
+
+[data-theme="dark"] .graph {
+  opacity: 0.7;
+}
+
+.graph1 {
+  width: 150px;
+  left: 300px;
+  top: 100px;
+
+  --graph-rotate-0: 0deg;
+  --graph-rotate-25: 10deg;
+  --graph-rotate-50: 0deg;
+  --graph-rotate-75: -10deg;
+  --graph-rotate-100: 0deg;
+
+  --graph-float-0: 0px;
+  --graph-float-25: 10px;
+  --graph-float-50: 0px;
+  --graph-float-75: -10px;
+  --graph-float-100: 0px;
+
+  animation: float 25s ease-in-out alternate-reverse infinite;
+}
+
+.graph2 {
+  width: 130px;
+  right: 290px;
+  top: 200px;
+
+  --graph-rotate-0: 0deg;
+  --graph-rotate-25: -10deg;
+  --graph-rotate-50: 0deg;
+  --graph-rotate-75: -20deg;
+  --graph-rotate-100: 0deg;
+
+  --graph-float-0: 0px;
+  --graph-float-25: 10px;
+  --graph-float-50: 0px;
+  --graph-float-75: -10px;
+  --graph-float-100: 0px;
+
+  animation: float 25s ease-in-out alternate-reverse infinite;
+}
+
+.graph3 {
+  width: 150px;
+  right: calc(50% - 150px);
+  bottom: 80px;
+
+  --graph-rotate-0: 0deg;
+  --graph-rotate-25: -20deg;
+  --graph-rotate-50: 0deg;
+  --graph-rotate-75: 20deg;
+  --graph-rotate-100: 0deg;
+
+  --graph-float-0: 0px;
+  --graph-float-25: 20px;
+  --graph-float-50: 0px;
+  --graph-float-75: -20px;
+  --graph-float-100: 0px;
+
+  animation: float 30s ease-in-out alternate-reverse infinite;
+}
+
+.graph4 {
+  width: 150px;
+  left: 300px;
+  bottom: 100px;
+
+  --graph-rotate-0: 0deg;
+  --graph-rotate-25: -10deg;
+  --graph-rotate-50: 0deg;
+  --graph-rotate-75: 5deg;
+  --graph-rotate-100: 0deg;
+
+  --graph-float-0: 0px;
+  --graph-float-25: 30px;
+  --graph-float-50: 0px;
+  --graph-float-75: -30px;
+  --graph-float-100: 0px;
+
+  animation: float 30s ease-in-out alternate-reverse infinite;
+}
+
+.graph5 {
+  width: 100px;
+  top: 120px;
+
+  --graph-rotate-0: 0deg;
+  --graph-rotate-25: 40deg;
+  --graph-rotate-50: 10deg;
+  --graph-rotate-75: 5deg;
+  --graph-rotate-100: 0deg;
+
+  --graph-float-0: 0px;
+  --graph-float-25: 20px;
+  --graph-float-50: 0px;
+  --graph-float-75: -25px;
+  --graph-float-100: 0px;
+
+  animation: float 30s ease-in-out alternate-reverse infinite;
+}
+
+.graph6 {
+  width: 120px;
+  bottom: 170px;
+  right: 200px;
+
+  --graph-rotate-0: 0deg;
+  --graph-rotate-25: 10deg;
+  --graph-rotate-50: 0deg;
+  --graph-rotate-75: -10deg;
+  --graph-rotate-100: 0deg;
+
+  --graph-float-0: 0px;
+  --graph-float-25: -10px;
+  --graph-float-50: 0px;
+  --graph-float-75: 15px;
+  --graph-float-100: 0px;
+
+  animation: float 20s ease-in-out alternate-reverse infinite;
+}
+
+:root {
+  /*rotation*/
+  --graph-rotate-0: 0deg;
+  --graph-rotate-25: 90deg;
+  --graph-rotate-50: 180deg;
+  --graph-rotate-75: 90deg;
+  --graph-rotate-100: 0deg;
+  
+  /*floating*/
+  --graph-float-0: 0px;
+  --graph-float-25: 30px;
+  --graph-float-50: 0px;
+  --graph-float-75: -30px;
+  --graph-float-100: 0px;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(var(--graph-float-0)) rotate(var(--graph-rotate-0));
+  }
+
+  25% {
+    transform: translatey(var(--graph-float-25)) rotate(var(--graph-rotate-25));
+  }
+
+  50% {
+    transform: translatey(var(--graph-float-50)) rotate(var(--graph-rotate-50));
+  }
+
+  75% {
+    transform: translatey(var(--graph-float-75)) rotate(var(--graph-rotate-75));
+  }
+
+  100% {
+    transform: translatey(var(--graph-float-100)) rotate(var(--graph-rotate-100));
+  }
 }
