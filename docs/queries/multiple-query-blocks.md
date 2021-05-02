@@ -30,10 +30,10 @@ var data2 []map[string]interface{}
 query2 := db.
     Query(dqlx.HasFn("name")).
     Fields(`
-            uid
-            name
-            species
-        `).
+        uid
+        name
+        species
+    `).
     Filter(
         dqlx.EqFn("name", "Leo"),
     ).

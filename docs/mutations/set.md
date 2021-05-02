@@ -145,7 +145,6 @@ Conditional upsert allows to avoid the entire operation if a certain condition i
 Imagine you want to only update a user by email if the email exists. If it doesn't you want to skip the operation
 and not insert the new record
 
-
 ```go
 data := []map[string]interface{}{
     {
