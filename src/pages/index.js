@@ -5,19 +5,25 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 
+import Graph1 from './../../static/img/graph-icon-1.svg';
+import Graph2 from './../../static/img/graph-icon-2.svg';
+import Graph3 from './../../static/img/graph-icon-3.svg';
+import Graph4 from './../../static/img/graph-icon-4.svg';
+import Graph5 from './../../static/img/graph-icon-5.svg';
+import Graph6 from './../../static/img/graph-icon-6.svg';
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
 
   return (
     <div className={clsx('hero', styles.heroBanner)}>
 
-      <img src={"/static/img/graph-icon-1.svg"} className={clsx(styles.graph, styles.graph1)} />
-      <img src={"/static/img/graph-icon-2.svg"} className={clsx(styles.graph, styles.graph2)} />
-      <img src={"/static/img/graph-icon-3.svg"} className={clsx(styles.graph, styles.graph3)} />
-      <img src={"/static/img/graph-icon-4.svg"} className={clsx(styles.graph, styles.graph4)} />
-      <img src={"/static/img/graph-icon-5.svg"} className={clsx(styles.graph, styles.graph5)} />
-      <img src={"/static/img/graph-icon-6.svg"} className={clsx(styles.graph, styles.graph6)} />
-
+      <Graph1 className={clsx(styles.graph, styles.graph1)} />
+      <Graph2 className={clsx(styles.graph, styles.graph2)} />
+      <Graph3 className={clsx(styles.graph, styles.graph3)} />
+      <Graph4 className={clsx(styles.graph, styles.graph4)} />
+      <Graph5 className={clsx(styles.graph, styles.graph5)} />
+      <Graph6 className={clsx(styles.graph, styles.graph6)} />
 
       <div className={clsx("container", styles.content)}>
 
@@ -32,7 +38,7 @@ function HomepageHeader() {
         </div>
         <div className={styles.githubLogo}>
           <a href={"https://github.com/fenos/dqlx"}>
-            <img src={"/static/img/github-icon.png"} />
+            <img src={require('../../static/img/github-icon.png').default} />
           </a>
           {/*<iframe src="https://ghbtns.com/github-btn.html?user=fenos&repo=dqlx&type=star&count=true&size=large"*/}
           {/*        frameBorder="0" scrolling="0" width="170" height="30" title="GitHub">*/}
