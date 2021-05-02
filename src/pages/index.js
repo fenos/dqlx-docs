@@ -44,6 +44,8 @@ function HomepageHeader() {
           {/*        frameBorder="0" scrolling="0" width="170" height="30" title="GitHub">*/}
           {/*</iframe>*/}
         </div>
+
+          <img src={require('../../static/img/gopher_head.png').default} className={styles.gopher}/>
       </div>
     </div>
   );
