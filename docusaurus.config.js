@@ -9,7 +9,13 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'fenos', // Usually your GitHub org/user name.
   projectName: 'dqlx', // Usually your repo name.
+  // plugins: ['@docusaurus/plugin-google-gtag'],
   themeConfig: {
+    gtag: {
+      trackingID: 'G-YSCRBK5HRD',
+      // Optional fields.
+      anonymizeIP: true, // Should IPs be anonymized?
+    },
     navbar: {
       title: 'dqlx',
       // logo: {
