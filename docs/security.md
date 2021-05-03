@@ -11,7 +11,7 @@ exploit.
 
 If you come from a SQL world you might be familiar with the term `SQL Injection`.
 
-DQL Injection is the same beast. Every time a query is dynamically generated (**with dqlx or not**) strings gets concatenated together to create the final query.
+DQL Injection is a similar beast ([somewhat less dangerous](https://discuss.dgraph.io/t/dgraph-dql-injection-prevention/13406)). Every time a query is dynamically generated (**with dqlx or not**) strings gets concatenated together to create the final query.
 
 The problem arise when your queries are generated based on `User Inputs`. If you are accepting user inputs that gets **directly mapped** into a query,
 the "Exploiter" might figure out a way to send an input which might alter the original query that you originally meant to run. 
