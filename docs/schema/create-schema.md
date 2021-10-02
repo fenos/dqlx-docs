@@ -24,7 +24,7 @@ schema.Predicate("name", dqlx.ScalarString)
 schema.Predicate("age", dqlx.ScalarInt)
 schema.Predicate("birthday", dqlx.ScalarDateTime)
 
-err := schame.Alter(ctx)
+err := schema.Alter(ctx)
 ```
 
 ### Types
@@ -129,7 +129,7 @@ schema := db.Schema()
 
 // ...
 
-err := schame.Alter(ctx, dqlx.WithDropAll(true))
+err := schema.Alter(ctx, dqlx.WithDropAll(true))
 ```
 
 By default, indexing is set to run **In the background** if you prefer it on the main process you can disable it
@@ -140,5 +140,5 @@ schema := db.Schema()
 
 // ...
 
-err := schame.Alter(ctx, dqlx.WithRunInBackground(false))
+err := schema.Alter(ctx, dqlx.WithRunInBackground(false))
 ```
